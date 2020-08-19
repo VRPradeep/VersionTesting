@@ -1,0 +1,2 @@
+
+#define getColumn(name) [[indexOf(WholeJSON['dataset']['0']['column_names'],name)]]

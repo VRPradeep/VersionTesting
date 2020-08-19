@@ -1,0 +1,11 @@
+
+#define Analytics()[[
+list1=groupByJson(currentYearData,0,1,sum());
+list2=groupByJson(previousYearData,0,1,sum());
+yoyList=deltaCalc(list1,list2);
+positiveCountries=filter(yoyList,x->x[1]>0);
+negativeCountries=filter(yoyList,x->x[1]<0);
+negCountries_list=map(negativeCountries,x->x[0]);
+negCountries_diff=map(negativeCountries,x->abs(x[1]));
+
+(negCountries_list=negCountries_list,negCountries_diff=negCountries_diff)]]

@@ -1,0 +1,3 @@
+
+[[Analytics=Analytics();"
+All markets show YOY growth in DSE , except [[pairwiseMap(Analytics.negCountries_list,Analytics.negCountries_diff,(x,y)->"[[x]]([[y]])")]]"]]

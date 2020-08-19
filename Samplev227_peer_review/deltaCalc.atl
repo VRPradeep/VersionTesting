@@ -1,0 +1,10 @@
+
+#define deltaCalc(list1,list2)[[
+sortedList1=sort(list1,(a,b) -> b[0] < a[0] ? 1: (b == a ? 0 : -1));
+sortedList2=sort(list2,(a,b) -> b[0] < a[0] ? 1: (b == a ? 0 : -1));
+dim1=map(sortedList1,x->x[0]);
+msr1=map(sortedList1,x->x[1]);
+msr2=map(sortedList2,x->x[1]);
+list1=zip(msr1,msr2);
+percentList=map(list1,x->diff(x[0],x[1]));
+zip(dim1,percentList)]]
